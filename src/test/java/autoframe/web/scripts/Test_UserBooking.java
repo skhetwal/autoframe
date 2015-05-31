@@ -31,8 +31,17 @@ public class Test_UserBooking {
 	public void BookRoom_Test() {
 		BookingPage bp = new BookingPage();
 		bp.selectInDate().selectOutDate().selectAdults().selectChildren()
-				.clickSearch().selectNumberOfRooms().clickReserve()//.ShareOnFB().cancelFBLogin()
-				.clickContinueReservation()
+				.clickSearch().selectNumberOfRooms().clickReserve()
+				.clickContinueReservation().enterContactInformation()
+				.click_BookRooms().ConfirmMessage();
+	}
+
+	@Test
+	public void BookRoomWithFBShare_Test() {
+		BookingPage bp = new BookingPage();
+		bp.selectInDate().selectOutDate().selectAdults().selectChildren()
+				.clickSearch().selectNumberOfRooms().clickReserve().ShareOnFB()
+				.cancelFBLogin().clickContinueReservation()
 				.enterContactInformation().click_BookRooms().ConfirmMessage();
 	}
 
