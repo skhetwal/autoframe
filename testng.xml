@@ -1,15 +1,10 @@
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<?xml version="1.0" encoding="UTF-8"?>
 
-<test name="Test-Hotel-Regression">
-	<groups>
-		<run>
-			<exclude name="brokenTests" />
-			<include name="All" />
-		</run>
-	</groups>
-
-	<classes>
-		<class name="autoframe.web.scripts.Test_HomeVerification" />
-		<class name="autoframe.web.scripts.Test_UserBoking" />
-	</classes>
-</test>
+<suite name="Test-Hotel-Tests">
+    <test name="Regression">
+        <classes>
+            <class name="autoframe.web.scripts.Test_HomeVerification" />
+            <class name="autoframe.web.scripts.Test_UserBooking" />
+        </classes>
+    </test>
+</suite>

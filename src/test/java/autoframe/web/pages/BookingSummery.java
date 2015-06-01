@@ -12,7 +12,6 @@ public class BookingSummery {
 	private String CLK_Close_CSS = "";
 	
 	public BookingSummery ConfirmMessage(){
-		System.out.println("zzzzzzzzzzz");
 		String confirmationMessage = Base.getDriver().findElement(By.cssSelector(LBL_Confirmation_CSS)).getText();
 		return this;
 	}

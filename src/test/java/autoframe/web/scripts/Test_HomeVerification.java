@@ -3,6 +3,7 @@ package autoframe.web.scripts;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -18,18 +19,19 @@ public class Test_HomeVerification {
 		driver = Base.getDriver();
 		driver.get(Base.BASE_URL);
 	}
-
-	@AfterClass
-	public void tearDown() {
+	
+	@AfterSuite
+	public void tearDown(){
 		driver.quit();
 	}
 
-	@Test
+
+	@Test(groups="All")
 	public void HomeUICheck_Test() {
 
 	}
 
-	@Test
+	@Test(groups="All")
 	public void HomeScrollCheck_Test() {
 	
 	}

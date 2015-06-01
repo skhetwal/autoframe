@@ -16,9 +16,8 @@ public class ConfirmReservation {
 	private String TXT_PHONENO_ID = "order_bill_address_attributes_phone";
 	private String TXT_EMAIL_ID = "order_bill_address_attributes_email";
 	private String TXT_COMMENT_ID = "comment";
-	
-	
-	private String CLK_Purchase_XPATH = "button_purchase";
+
+	private String CLK_Purchase_XPATH = "(//input[@id='button_purchase'])[2]";
 	
 	public ConfirmReservation enterContactInformation(){
 		Base.getDriver().findElement(By.id(TXT_FirstName_ID)).sendKeys("FirstName");
